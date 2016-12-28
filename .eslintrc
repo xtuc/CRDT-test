@@ -1,0 +1,45 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "flowtype",
+    "flowtype-errors"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "rules": {
+    "camelcase": [ 2 ],
+    "strict": [ 2, "global"],
+    "no-throw-literal": [ 2 ],
+    "default-case": [ 2 ],
+    "no-implicit-globals": [ 2 ],
+    "consistent-return": [ 2, { "treatUndefinedAsUnspecified": false}],
+    "indent": [ 1, 2 ],
+    "no-console": [ 1 ],
+    "linebreak-style": [ 2, "unix" ],
+    "quotes": [ 2, "single", {"allowTemplateLiterals": true}],
+    "semi": [ 2, "always" ],
+    "no-unused-vars": ["error", { varsIgnorePattern: "(isWeb|PresageVideo|sdk|Presage|triggerEvent|DEBUG|h)" }],
+    "no-var": [ 2 ],
+    "flowtype-errors/show-errors": 2,
+    "no-implicit-coercion": [ 1 ],
+    "no-trailing-spaces": 2,
+    "accessor-pairs": 2
+  },
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  }
+}
